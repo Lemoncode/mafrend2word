@@ -46,17 +46,14 @@
               <%_}-%>
             </p>
           </div>
-            <%_ if(experience.type) { -%>
-              <p class="section__content__data">Tipo de organización: <b><%- experience.type %></b></p>
-            <%_ } -%>
-            <p class="section__content__data">Roles dentro de la empresa: <b><%- experience.roles[0].name %></b></p>
+            <p class="section__content__data"><b><%- experience.roles[0].name %></b></p>
             <%_ if(experience.roles[0].challenges && experience.roles[0].challenges.length !== 0) { -%>
-              <p class="section__content__data">Retos:</p>
-                <ul class="section__content__data section__content__data__ul">
+
+                <div class="section__content__data section__content__data__ul">
                   <%_ for(const challenge of experience.roles[0].challenges){ -%>
-                    <li><%- challenge.description %></li>
+                    <%- mapMarkdownToHTML(challenge.description) %>
                   <%_ }-%>
-                </ul>
+                  </div>
               <%_ }-%>
         </div>
       </div>

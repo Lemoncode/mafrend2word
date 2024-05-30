@@ -1,5 +1,6 @@
 import ejs from 'ejs';
 import { ExperienceVm, mapFromMacCvToExperienceSectionVm } from '@lemoncode/manfred-common/experience-section';
+import { mapMarkdownToHTML } from '@/mappers';
 import { Settings, Language, ManfredAwesomicCV } from '@/model';
 import { ISO_SPANISH_LANGUAGE } from '@/engine/engine.const';
 import experienceTemplate from './experience-section.ejs?raw';
@@ -18,6 +19,7 @@ const generateExperienceSectionInner = (
   const rootObject = {
     experienceCollection: experienceSectionVm,
     labels: getLabels(language),
+    mapMarkdownToHTML,
   };
 
   return ejs.render(experienceTemplate, rootObject);

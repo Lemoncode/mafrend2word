@@ -49,6 +49,17 @@
         justify-content: center;
         min-height: 100vh;
       }
+      ul,
+      ul ul {
+        padding-left: var(--spacing_16);
+      }
+      p br {
+        margin-bottom: var(--spacing_12);
+      }
+
+      p span {
+        margin: 0 var(--spacing_8);
+      }
       .container {
         max-width: 1200px;
         background-color: var(--white_color);
@@ -245,7 +256,6 @@
       }
       .section__content__data__ul {
         font-weight: 300;
-        padding-left: var(--spacing_16);
       }
       .data {
         color: var(--gray_color_900);
@@ -391,13 +401,14 @@
             Llevo casi dos décadas desarrollando software, ocupando puestos a lo largo de toda la cadena de valor
             -programacion, diseño de producto, marketing, ventas y gestión de equipos, departamentos y empresas- pero
             creo que el rol donde se cruzan mi vocación, mis habilidades y las necesidades de la mayoría de las empresas
-            es en la gestión de equipos y proyectos de construcción de activos digitales. Me apasiona contribuir en todo
-            el ciclo de vida de un producto o servicio informático, desde la definición hasta el mantenimiento o soporte
-            a clientes, y también involucrarme en la comercialización del mismo. Me gusta trabajar con gente y para la
-            gente. Como responsable de equipos, mi principal prioridad siempre es eliminar cualquier problema que les
-            impida alcanzar todo su potencial. También procuro devolver a la Comunidad informática parte del valor y el
-            conocimiento que me han aportado a lo largo de mi carrera profesional, dando charlas o colaborando con
-            grupos de usuarios y conferencias técnicas; y, a veces, organizándolos.
+            es en la gestión de equipos y proyectos de construcción de activos digitales.<br />
+            Me apasiona contribuir en todo el ciclo de vida de un producto o servicio informático, desde la definición
+            hasta el mantenimiento o soporte a clientes, y también involucrarme en la comercialización del mismo.<br />
+            Me gusta trabajar con gente y para la gente. Como responsable de equipos, mi principal prioridad siempre es
+            eliminar cualquier problema que les impida alcanzar todo su potencial. También procuro devolver a la
+            Comunidad informática parte del valor y el conocimiento que me han aportado a lo largo de mi carrera
+            profesional, dando charlas o colaborando con grupos de usuarios y conferencias técnicas; y, a veces,
+            organizándolos.
           </p>
         </section>
         <section class="main__section">
@@ -428,35 +439,30 @@
                 </svg>
                 <p>Jun 2018 - Actualidad</p>
               </div>
-
-              <p class="section__content__data">Tipo de organización: <b>Startup</b></p>
-              <p class="section__content__data">Roles dentro de la empresa: <b>CEO</b></p>
-              <p class="section__content__data">Retos:</p>
-              <ul class="section__content__data section__content__data__ul">
-                <li>
-                  Adaptación de la organización y procesos de la empresa para escalar las operaciones de la misma.
-                </li>
-                <li>
+              <p class="section__content__data"><b>CEO</b></p>
+              <div class="section__content__data section__content__data__ul">
+                <p>Adaptación de la organización y procesos de la empresa para escalar las operaciones de la misma.</p>
+                <p>
                   Desarrollo de producto propio para escalar las operaciones de la compañía, especialmente la aportación
                   de valor a candidatos.
-                </li>
-                <li>
+                </p>
+                <p>
                   Culminación del [proceso de compraventa](https://bonillaware.com/manfred-sngular) de la compañía por
                   parte de Sngular, manteniendo el núcleo de empleados de la compañía y sin que la productividad o las
                   ventas se resintieran antes, durante y después del mismo.
-                </li>
-                <li>
+                </p>
+                <p>
                   Creación y publicación de contratos open source (candidatos y empresas) para construir un marco legal
                   para una empresa de recruiting.
-                </li>
-                <li>
+                </p>
+                <p>
                   Definición del modelo de datos y los procesos necesarios para identificar, clasificar y gestionar
                   perfiles de profesionales técnicos.
-                </li>
-                <li>Definición de formato CV extendido.</li>
-                <li>Definición e implementación de la web de la compañía.</li>
-                <li>Apertura de nueva filial en Bilbao.</li>
-              </ul>
+                </p>
+                <p>Definición de formato CV extendido.</p>
+                <p>Definición e implementación de la web de la compañía.</p>
+                <p>Apertura de nueva filial en Bilbao.</p>
+              </div>
             </div>
           </div>
           <div class="main__section__item">
@@ -483,18 +489,15 @@
                 </svg>
                 <p>Feb 2017 - Jun 2018</p>
               </div>
-
-              <p class="section__content__data">Tipo de organización: <b>Startup</b></p>
-              <p class="section__content__data">Roles dentro de la empresa: <b>Fundador</b></p>
-              <p class="section__content__data">Retos:</p>
-              <ul class="section__content__data section__content__data__ul">
-                <li>Adaptación de todos los procesos de la compañía al nuevo RGPD</li>
-                <li>Apertura de nueva filial en Bilbao</li>
-                <li>Coordinación de actividades en Europa</li>
-                <li>Estandarización de contratos</li>
-                <li>Soporte</li>
-                <li>Lanzamiento de Comala Agile Ranking</li>
-              </ul>
+              <p class="section__content__data"><b>Fundador</b></p>
+              <div class="section__content__data section__content__data__ul">
+                <p>Adaptación de todos los procesos de la compañía al nuevo RGPD</p>
+                <p>Apertura de nueva filial en Bilbao</p>
+                <p>Coordinación de actividades en Europa</p>
+                <p>Estandarización de contratos</p>
+                <p>Soporte</p>
+                <p>Lanzamiento de Comala Agile Ranking</p>
+              </div>
             </div>
           </div>
           <div class="main__section__item">
@@ -508,7 +511,6 @@
 
               <p class="data">Tipo de organización: <b>Institución académica</b></p>
               <p class="data">
-                Roles dentro de la empresa:
                 <b>Profesor asociado de productividad y metodologías ágiles</b>
               </p>
             </div>
@@ -542,11 +544,11 @@
                 </svg>
                 <p>Sep 2002 - Jun 2006</p>
               </div>
-
-              <p class="data">Tipo de estudios: <b>Grado oficial</b></p>
-              <p class="data">Grado obtenido: <b>No obtenido</b></p>
-              <p class="data">Nombre de la institución: <b>OUC</b></p>
-              <p class="data">Ubicación de la institución: <b>Cataluña, España</b></p>
+              <p class="data"><b>OUC</b></p>
+              <p>
+                .NET <span>|</span> .htaccess <span>|</span> ActiveCampaign <span>|</span> Adobe Analytics
+                <span>|</span> Linux <span>|</span> Metasploit
+              </p>
             </div>
           </div>
           <div class="main__section__item">
@@ -572,11 +574,11 @@
                 </svg>
                 <p>Sep 2002 - Jun 2006</p>
               </div>
-
-              <p class="data">Tipo de estudios: <b>Certificación</b></p>
-              <p class="data">Grado obtenido: <b>Obtenido</b></p>
-              <p class="data">Nombre de la institución: <b>CFDTI IBM/La Caixa</b></p>
-              <p class="data">Ubicación de la institución: <b>Madrid, España</b></p>
+              <p class="data"><b>CFDTI IBM/La Caixa</b></p>
+              <p>
+                .NET <span>|</span> .htaccess <span>|</span> ActiveCampaign <span>|</span> Adobe Analytics
+                <span>|</span> Linux <span>|</span> Metasploit
+              </p>
             </div>
           </div>
           <div class="main__section__item">
@@ -602,11 +604,11 @@
                 </svg>
                 <p>Sep 2002 - Jun 2006</p>
               </div>
-
-              <p class="data">Tipo de estudios: <b>Certificación</b></p>
-              <p class="data">Grado obtenido: <b>Obtenido</b></p>
-              <p class="data">Nombre de la institución: <b>Scrum Alliance</b></p>
-              <p class="data">Ubicación de la institución: <b>Madrid, España</b></p>
+              <p class="data"><b>Scrum Alliance</b></p>
+              <p>
+                .NET <span>|</span> .htaccess <span>|</span> ActiveCampaign <span>|</span> Adobe Analytics
+                <span>|</span> Linux <span>|</span> Metasploit
+              </p>
             </div>
           </div>
         </section>

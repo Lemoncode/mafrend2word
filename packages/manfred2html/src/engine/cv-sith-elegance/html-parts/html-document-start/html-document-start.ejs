@@ -51,17 +51,6 @@
         min-height: 100vh;
         padding: var(--spacing_64) var(--spacing_16);
       }
-      ul  ul {
-        padding-left: var(--spacing_16);
-      }
-
-      p br {
-        margin-bottom: var(--spacing_12);
-      }
-
-      p span {
-        margin: 0 var(--spacing_8);
-      }
       .container {
         display: grid;
         grid-template-areas:
@@ -319,6 +308,18 @@
         gap: var(--spacing_12);
         padding-left: var(--spacing_16);
         font-weight: 300;
+      }
+      .section__content > .data * + * {
+        margin-top: var(--spacing_8);
+      }
+      .section__content > .data ul, .section__content__data ol {
+        padding-left: var(--spacing_16);
+      }
+      .section__content > .data b {
+        font-weight: 600;
+      }
+      p.competences span {
+        margin: 0 var(--spacing_8);
       }
       @media (min-width: 728px) {
         main {

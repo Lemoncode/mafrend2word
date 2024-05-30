@@ -4,7 +4,7 @@
     <h2><%- labels.ABOUT_ME_HEADING %></h2>
     <hr class="divider"/>
   </div>
-    <p class="main__section__item"><%= profile?.description %></p>
+    <div class="main__section__item about-me__description"><%- mapMarkdownToHTML(profile?.description) %></div>
   </section>
 <%_ } -%>
 

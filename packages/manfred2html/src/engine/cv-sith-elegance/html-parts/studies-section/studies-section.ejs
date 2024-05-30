@@ -38,7 +38,7 @@
           <div class="data">
             <p><b><%- study.institution.name %></b></p>
             <%_ if (study.linkedCompetences && study.linkedCompetences.length !== 0) { -%>
-              <p>
+              <p class="competences">
                 <% study.linkedCompetences.forEach(function(competence, index) { %>
                   <% if (index === study.linkedCompetences.length - 1) { %>
                     <%- competence.name %>
