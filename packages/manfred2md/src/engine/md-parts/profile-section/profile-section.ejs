@@ -4,13 +4,15 @@
 
 ---
 
+<%_ if (profile?.description) { -%>
 ### Presentación
 <%= profile?.description %>
+<%_ } -%>
 
+<%_ if (profile?.relevantLinks && profile?.relevantLinks.length > 0) { -%>
 ---
 
 ### Mis enlaces
-  <%_ if (profile?.relevantLinks) { -%>
     <%_ for (const link of profile?.relevantLinks) { -%>
       <%_ if (link.type === 'linkedin') { -%>
   - ![<%= link.type -%>](https://raw.githubusercontent.com/Lemoncode/manfred-export-app/main/media/linkedin.svg) [<%= link.type -%>](<%= link.URL -%>)

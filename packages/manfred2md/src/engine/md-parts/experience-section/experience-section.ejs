@@ -1,24 +1,31 @@
+<%_ if (experienceCollection && experienceCollection.length > 0 && experienceCollection !== 'undefined') { -%>
 ---
 
 ### EXPERIENCIA / CARRERA
-<%_ if (experienceCollection && experienceCollection !== 'undefined') { -%>
   <%_ for (const job of experienceCollection) { -%>
   - #### <%- job.name %>
+    <%_ if (job.type && job.type !== 'undefined' ) { -%>
     - **Tipo de Organización:** <%- job.type %>
+    <%_ } -%>
+    <%_ if (job.description && job.description !== 'undefined' ) { -%>
     - **Descripción:** <%- job.description %>
-    - **Roles dentro de la empresa:**
+    <%_ } -%>
     <%_ if (job.roles && job.roles !== 'undefined' ) { -%>
+    - **Roles dentro de la empresa:**
       <%_ for (const role of job.roles) { -%>
+        <%_ if (role.name && role.name !== 'undefined' ) { -%>
       - **<%= role.name %>**
+        <%_ } -%>
         - **Duración:** <%= role.startDate %> - <%= role.finishDate ?? 'Actualidad' %>
-        - **Retos:**
         <%_ if (role.challenges && role.challenges !== 'undefined' ) { -%>
+        - **Retos:**
           <%_ for (const challenge of role.challenges) { -%>
+            <%_ if (challenge.description && challenge.description !== 'undefined') { -%>
           - <%= challenge.description %>
+            <%_ } -%>
           <%_ } -%>
         <%_ } -%>
       <%_ } -%>
     <%_ } -%>
   <%_ } -%>
 <%_ } -%>
-

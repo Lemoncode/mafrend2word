@@ -1,7 +1,7 @@
+<%_ if (softSkillsCollection && softSkillsCollection.length > 0 && softSkillsCollection !== 'undefined') { -%>
 ---
 
 ### SOFT SKILLS 
 
-<%_ if (softSkillsCollection && softSkillsCollection !== 'undefined') { -%>
   <%- softSkillsCollection.map(element => element.skill.name).join(' / ') %>
 <%_ } -%>

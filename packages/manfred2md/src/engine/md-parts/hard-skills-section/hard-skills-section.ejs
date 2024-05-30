@@ -1,7 +1,7 @@
+<%_ if (hardSkillsCollection && hardSkillsCollection.length > 0 && hardSkillsCollection !== 'undefined') { -%>
 ---
 
 ### HARD SKILLS 
 
-<%_ if (hardSkillsCollection && hardSkillsCollection !== 'undefined') { -%>
   <%- hardSkillsCollection.map(element => element.skill.name).join(' / ') %>
 <%_ } -%>

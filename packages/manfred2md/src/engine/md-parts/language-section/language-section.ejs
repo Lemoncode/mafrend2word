@@ -1,13 +1,13 @@
+<%_ if (languageCollection && languageCollection.length > 0 && languageCollection !== 'undefined') { -%>
 ---
 
 ### LENGUAJE / NIVEL
 
-<%_ if (languageCollection && languageCollection !== 'undefined') { -%>
   <%_ for (const language of languageCollection) { -%>
   #### <%- language.name %>
-
+  <%_ if (language.level && language.level !== 'undefined') { -%>
   <%- language.level %>
-
+  <%_ } -%>
   <%_ } -%>
 <%_ } -%>
 

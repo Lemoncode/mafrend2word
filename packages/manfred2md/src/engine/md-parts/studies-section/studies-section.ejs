@@ -1,8 +1,8 @@
+<%_ if (studiesCollection && studiesCollection.length > 0 && studiesCollection !== 'undefined') { -%>
 ---
 
 ### EDUCACIÓN
 
-<%_ if (studiesCollection && studiesCollection !== 'undefined') { -%>
   <%_ for (const study of studiesCollection) { -%>
 #### <%= study?.name %>
     <%_ if ( study?.description ) { -%>
@@ -17,16 +17,14 @@
 - **Grado obtenido:** <%= study.degreeAchieved ? "No obtenido" : "Obtenido"%>
     <%_ } -%>
 
-    <%_ if ( study?.startDate && study?.finishDate ) { -%>
 - **Fecha de inicio y finalización:** <%= study.startDate %> - <%= study.finishDate === "" ? "Actualidad" : study.finishDate %>
-    <%_ } -%>
 
-    <%_ if ( study?.institution ) { -%>
+    <%_ if ( study?.institution.name ) { -%>
 - **Nombre de Institución:** <%= study.institution.name %>
     <%_ } -%>
 
     <%_ if ( study.institution.location?.region || study.institution.location?.country ) { -%>
-- **Ubicación de la Institución:** <%= study.institution.location.region %>, <%= study.institution.location.country %>
+- **Ubicación de la Institución:** <%= study.institution.location.region ? ( study.institution.location?.country ? study.institution.location.region + ", " : study.institution.location.region) : "" %><%= study.institution.location.country %>
     <%_ } -%>
   <%_ } -%>
 <%_ } -%>
