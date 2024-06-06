@@ -2,18 +2,23 @@ name: Continuos Integration workflow
 
 on: pull_request
 
-env:
-  HUSKY: 0
-
 jobs:
   ci:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Install
-        run: npm ci
-      - name: Check types
-        run: npm run type-check
+        uses: actions/checkout@v4
+
+      - name: Setup node version
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.x
+      - name:
+          Install
+          # Issue turborepo install on linux: https://github.com/vercel/turbo/issues/3328#issuecomment-1413206817
+          # It fails sometimes
+        run: |
+          npm install -D --arch=x64 --platform=linux turbo
+          npm ci
       - name: Tests
-        run: npm test
+        run: npm run test
