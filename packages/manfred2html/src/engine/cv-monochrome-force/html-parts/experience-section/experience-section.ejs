@@ -16,7 +16,7 @@
         <%_ if(experience.roles[0].challenges && experience.roles[0].challenges.length !== 0) { -%>
         <div class="experience__text">
           <%_ for(const challenge of experience.roles[0].challenges){ -%>
-          <p><%- challenge.description %></p>
+          <%- mapMarkdownToHTML(challenge.description) %>
           <%_}-%>
         </div>
         <%_}-%>

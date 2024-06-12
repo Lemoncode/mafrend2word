@@ -337,6 +337,9 @@
       }
 
       /* section about */
+      .about__text * + * {
+        margin-top: var(--space-8);
+      }
       @media screen and (min-width: 834px) {
         .about {
           font-size: var(--fs-l);
@@ -519,6 +522,13 @@
       .experience__text {
         font-weight: var(--fw-light);
       }
+      .experience__text ul,
+      .experience__text ol {
+        padding-left: var(--space-24);
+      }
+      .experience__text * + * {
+        margin-top: var(--space-base);
+      }
       .experience__url {
         display: block;
         font-size: var(--fs-xs);
@@ -533,6 +543,7 @@
         font-weight: var(--fw-medium);
         color: var(--primary-600);
         margin-bottom: var(--space-16);
+        margin-top: var(--space-base);
       }
       .experience__tools-list {
         padding: 0;
@@ -813,18 +824,20 @@
       </section>
       <section class="section about">
         <h2 class="title">Sobre mi</h2>
-        <p>
-          Llevo casi dos décadas desarrollando software, ocupando puestos a lo largo de toda la cadena de valor
-          -programacion, diseño de producto, marketing, ventas y gestión de equipos, departamentos y empresas- pero creo
-          que el rol donde se cruzan mi vocación, mis habilidades y las necesidades de la mayoría de las empresas es en
-          la gestión de equipos y proyectos de construcción de activos digitales. Me apasiona contribuir en todo el
-          ciclo de vida de un producto o servicio informático, desde la definición hasta el mantenimiento o soporte a
-          clientes, y también involucrarme en la comercialización del mismo. Me gusta trabajar con gente y para la
-          gente. Como responsable de equipos, mi principal prioridad siempre es eliminar cualquier problema que les
-          impida alcanzar todo su potencial. También procuro devolver a la Comunidad informática parte del valor y el
-          conocimiento que me han aportado a lo largo de mi carrera profesional, dando charlas o colaborando con grupos
-          de usuarios y conferencias técnicas; y, a veces, organizándolos.
-        </p>
+        <div class="about__text">
+          <p>
+            Llevo casi dos décadas desarrollando software, ocupando puestos a lo largo de toda la cadena de valor
+            -programacion, diseño de producto, marketing, ventas y gestión de equipos, departamentos y empresas- pero
+            creo que el rol donde se cruzan mi vocación, mis habilidades y las necesidades de la mayoría de las empresas
+            es en la gestión de equipos y proyectos de construcción de activos digitales. Me apasiona contribuir en todo
+            el ciclo de vida de un producto o servicio informático, desde la definición hasta el mantenimiento o soporte
+            a clientes, y también involucrarme en la comercialización del mismo. Me gusta trabajar con gente y para la
+            gente. Como responsable de equipos, mi principal prioridad siempre es eliminar cualquier problema que les
+            impida alcanzar todo su potencial. También procuro devolver a la Comunidad informática parte del valor y el
+            conocimiento que me han aportado a lo largo de mi carrera profesional, dando charlas o colaborando con
+            grupos de usuarios y conferencias técnicas; y, a veces, organizándolos.
+          </p>
+        </div>
       </section>
       <section class="section hard-skills">
         <h2 class="title">Habilidades</h2>

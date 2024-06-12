@@ -4,6 +4,7 @@ import { ISO_SPANISH_LANGUAGE } from '@/engine/engine.const';
 import { ManfredAwesomicCV, Settings, Language } from '@/model';
 import { getLabels } from './labels';
 import aboutMeSection from './about-me-section.ejs?raw';
+import { mapMarkdownToHTML } from '@/mappers';
 
 export const generateAboutMeSection = (cv: ManfredAwesomicCV, settings: Settings): string => {
   const profileSectionVm = mapFromMacCvToProfileSectionVm(cv);
@@ -18,6 +19,7 @@ const generateAboutMeSectionInner = (
   const rootObject = {
     profile: profileSectionVm,
     labels: getLabels(language),
+    mapMarkdownToHTML,
   };
   return ejs.render(aboutMeSection, rootObject);
 };

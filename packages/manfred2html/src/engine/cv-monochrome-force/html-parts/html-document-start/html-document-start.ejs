@@ -337,6 +337,9 @@
       }
 
       /* section about */
+      .about__text * + * {
+        margin-top: var(--space-8);
+      }
       @media screen and (min-width: 834px) {
         .about {
           font-size: var(--fs-l);
@@ -519,6 +522,13 @@
       .experience__text {
         font-weight: var(--fw-light);
       }
+      .experience__text ul, .experience__text ol{
+        padding-left: var(--space-24);
+      }
+      .experience__text * + *{
+        margin-top: var(--space-base);
+      }
+
       .experience__url {
         display: block;
         font-size: var(--fs-xs);
@@ -533,6 +543,7 @@
         font-weight: var(--fw-medium);
         color: var(--primary-600);
         margin-bottom: var(--space-16);
+        margin-top: var(--space-base);
       }
       .experience__tools-list {
         padding: 0;

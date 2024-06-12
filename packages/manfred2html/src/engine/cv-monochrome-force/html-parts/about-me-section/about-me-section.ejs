@@ -1,6 +1,6 @@
 <%_ if (profile.description && profile.description !== 'undefined' ) { -%>
     <section class="section about">
         <h2 class="title"><%- labels.ABOUT_ME_HEADING %></h2>
-        <p><%= profile.description %></p>
+        <div class="about__text"><%- mapMarkdownToHTML(profile.description) %></div>
     </section>
 <%_ } -%>

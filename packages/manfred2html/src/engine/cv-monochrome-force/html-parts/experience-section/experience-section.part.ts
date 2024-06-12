@@ -4,6 +4,7 @@ import { Settings, Language, ManfredAwesomicCV } from '@/model';
 import { ISO_SPANISH_LANGUAGE } from '@/engine/engine.const';
 import experienceTemplate from './experience-section.ejs?raw';
 import { getLabels } from './labels';
+import { mapMarkdownToHTML } from '@/mappers';
 
 export const generateExperiencesSection = (cv: ManfredAwesomicCV, settings: Settings): string => {
   const experienceSectionVm = mapFromMacCvToExperienceSectionVm(cv);
@@ -18,6 +19,7 @@ const generateExperienceSectionInner = (
   const rootObject = {
     experienceCollection: experienceSectionVm,
     labels: getLabels(language),
+    mapMarkdownToHTML,
   };
 
   return ejs.render(experienceTemplate, rootObject);
